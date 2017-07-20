@@ -1,0 +1,32 @@
+start_sim,2017
+# begin Fall_2017 term
+hire,3
+# instructor 3 now hired
+teach_course,3,2
+# instructor 3 is assigned to course 2
+request_course,5,2
+# enrolled
+request_course,9,2
+# enrolled
+assign_grade,5,2,C,3,occasional_technical_problems
+# grade recorded
+assign_grade,9,2,D,3
+# grade recorded
+student_report,5
+# student, JOSEPH LAWSON
+5: JOSEPH LAWSON, 447 Carriage Drive 77403, 7405768930
+2, C, Fall_2017, 3, occasional_technical_problems
+student_report,9
+# student, GARY ALLEN
+9: GARY ALLEN, 128 Pine Street 83866, 8304231126
+2, D, Fall_2017, 3
+next_term
+# begin Winter_2017 term
+teach_course,3,2
+# instructor 3 is assigned to course 2
+request_course,5,2
+# not enrolled: course already passed before
+request_course,9,2
+# enrolled
+stop_sim
+# end Winter_2017 term

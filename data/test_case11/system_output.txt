@@ -1,0 +1,14 @@
+start_sim,2017
+# begin Fall_2017 term
+hire,2
+# instructor 2 now hired
+teach_course,2,2
+# instructor 2 is assigned to course 2
+request_course,4,2
+# enrolled
+request_course,4,2
+# student already enrolled in course
+request_course,4,5
+# not enrolled: course not being offered this term
+stop_sim
+# end Fall_2017 term

@@ -1,0 +1,58 @@
+start_sim,2017
+# begin Fall_2017 term
+student_report,15
+# student, JAMES FISHER
+15: JAMES FISHER, 231 Windsor Court 12288, 4477500021
+hire,3
+# instructor 3 now hired
+teach_course,3,2
+# instructor 3 is assigned to course 2
+request_course,15,2
+# enrolled
+assign_grade,15,2,F,3,sincere_effort_lacks_background
+# grade recorded
+student_report,15
+# student, JAMES FISHER
+15: JAMES FISHER, 231 Windsor Court 12288, 4477500021
+2, F, Fall_2017, 3, sincere_effort_lacks_background
+next_term
+# begin Winter_2017 term
+teach_course,3,2
+# instructor 3 is assigned to course 2
+request_course,15,2
+# enrolled
+assign_grade,15,2,D,3
+# grade recorded
+student_report,15
+# student, JAMES FISHER
+15: JAMES FISHER, 231 Windsor Court 12288, 4477500021
+2, F, Fall_2017, 3, sincere_effort_lacks_background
+2, D, Winter_2017, 3
+next_term
+# begin Spring_2017 term
+teach_course,3,2
+# instructor 3 is assigned to course 2
+request_course,15,2
+# enrolled
+assign_grade,15,2,B,3,improved_fundamentals
+# grade recorded
+student_report,15
+# student, JAMES FISHER
+15: JAMES FISHER, 231 Windsor Court 12288, 4477500021
+2, F, Fall_2017, 3, sincere_effort_lacks_background
+2, D, Winter_2017, 3
+2, B, Spring_2017, 3, improved_fundamentals
+next_term
+# begin Summer_2017 term
+teach_course,3,2
+# instructor 3 is assigned to course 2
+request_course,15,2
+# not enrolled: course already passed before
+student_report,15
+# student, JAMES FISHER
+15: JAMES FISHER, 231 Windsor Court 12288, 4477500021
+2, F, Fall_2017, 3, sincere_effort_lacks_background
+2, D, Winter_2017, 3
+2, B, Spring_2017, 3, improved_fundamentals
+stop_sim
+# end Summer_2017 term

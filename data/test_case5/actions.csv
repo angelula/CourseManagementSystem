@@ -1,0 +1,7 @@
+start_sim,2017
+hire,3
+teach_course,3,2
+request_course,4,2
+assign_grade,4,2,A,3,nice_job
+student_report,4
+stop_sim

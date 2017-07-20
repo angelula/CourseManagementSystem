@@ -1,0 +1,16 @@
+start_sim,2017
+# begin Fall_2017 term
+next_term
+# begin Winter_2017 term
+next_term
+# begin Spring_2017 term
+next_term
+# begin Summer_2017 term
+next_term
+# begin Fall_2018 term
+next_term
+# begin Winter_2018 term
+next_term
+# begin Spring_2018 term
+stop_sim
+# end Spring_2018 term

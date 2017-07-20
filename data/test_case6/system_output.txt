@@ -1,0 +1,18 @@
+start_sim,2017
+# begin Fall_2017 term
+hire,3
+# instructor 3 now hired
+request_course,5,2
+# not enrolled: no available seats
+teach_course,3,2
+# instructor 3 is assigned to course 2
+request_course,5,2
+# enrolled
+assign_grade,5,2,B,3
+# grade recorded
+student_report,5
+# student, JOSEPH LAWSON
+5: JOSEPH LAWSON, 447 Carriage Drive 77403, 7405768930
+2, B, Fall_2017, 3
+stop_sim
+# end Fall_2017 term

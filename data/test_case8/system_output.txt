@@ -1,0 +1,32 @@
+start_sim,2017
+# begin Fall_2017 term
+next_term
+# begin Winter_2017 term
+hire,3
+# instructor 3 now hired
+teach_course,3,2
+# instructor 3 is assigned to course 2
+hire,8
+# instructor 8 now hired
+teach_course,8,5
+# instructor 8 is assigned to course 5
+request_course,16,2
+# enrolled
+request_course,16,5
+# not enrolled: missing prerequisites
+assign_grade,16,2,C,3
+# grade recorded
+next_term
+# begin Spring_2017 term
+student_report,16
+# student, TRACEY WHITE
+16: TRACEY WHITE, 387 Canterbury Drive 49531, 4952312905
+2, C, Winter_2017, 3
+teach_course,8,5
+# instructor 8 is assigned to course 5
+request_course,16,5
+# enrolled
+assign_grade,16,5,A,8
+# grade recorded
+stop_sim
+# end Spring_2017 term

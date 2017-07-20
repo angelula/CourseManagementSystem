@@ -1,0 +1,8 @@
+start_sim,2017
+hire,2
+teach_course,2,2
+teach_course,2,10
+hire,4
+teach_course,4,10
+teach_course,4,5
+stop_sim

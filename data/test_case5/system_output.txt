@@ -1,0 +1,16 @@
+start_sim,2017
+# begin Fall_2017 term
+hire,3
+# instructor 3 now hired
+teach_course,3,2
+# instructor 3 is assigned to course 2
+request_course,4,2
+# enrolled
+assign_grade,4,2,A,3,nice_job
+# grade recorded
+student_report,4
+# student, ROBERT RYAN
+4: ROBERT RYAN, 481 Valley View Drive 42223, 7153848491
+2, A, Fall_2017, 3, nice_job
+stop_sim
+# end Fall_2017 term

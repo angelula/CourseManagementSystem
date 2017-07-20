@@ -1,0 +1,14 @@
+start_sim,2017
+hire,3
+teach_course,3,2
+request_course,5,2
+request_course,9,2
+assign_grade,5,2,C,3,occasional_technical_problems
+assign_grade,9,2,D,3
+student_report,5
+student_report,9
+next_term
+teach_course,3,2
+request_course,5,2
+request_course,9,2
+stop_sim

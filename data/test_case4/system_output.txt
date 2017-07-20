@@ -1,0 +1,24 @@
+start_sim,2017
+# begin Fall_2017 term
+hire,2
+# instructor 2 now hired
+teach_course,2,2
+# instructor 2 is assigned to course 2
+teach_course,2,5
+# ERROR: instructor is already teaching a different course
+instructor_report,2
+# instructor, EVERETT KIM
+# 2, Computer Programming
+next_term
+# begin Winter_2017 term
+teach_course,2,17
+# ERROR: instructor is not eligible to teach this course
+teach_course,2,5
+# instructor 2 is assigned to course 5
+instructor_report,2
+# instructor, EVERETT KIM
+# 5, Data Structures
+teach_course,2,2
+# ERROR: instructor is already teaching a different course
+stop_sim
+# end Winter_2017 term

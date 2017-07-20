@@ -1,0 +1,16 @@
+start_sim,2017
+# begin Fall_2017 term
+hire,2
+# instructor 2 now hired
+teach_course,2,2
+# instructor 2 is assigned to course 2
+teach_course,2,10
+# ERROR: instructor is not eligible to teach this course
+hire,4
+# instructor 4 now hired
+teach_course,4,10
+# instructor 4 is assigned to course 10
+teach_course,4,5
+# ERROR: instructor is not eligible to teach this course
+stop_sim
+# end Fall_2017 term

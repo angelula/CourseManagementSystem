@@ -1,0 +1,100 @@
+<!-- ANT configuration for sim util project. -->
+<project name="CourseManagementSystem" basedir="." default="jar">
+    
+    <!-- Project-specific settings -->
+    <property file="project.properties"/>
+
+    <!-- Compile -->
+    <target name="compile" depends="init">
+      <javac destdir="${dir.output.bin}" debug="true" debuglevel="lines,vars,source">
+        <src path="${dir.src}"/>
+        <classpath refid="classpath"/>
+      </javac>
+      <copy todir="${dir.output.bin}" verbose="false">
+        <fileset dir="${dir.src}">
+        </fileset>
+      </copy>
+    </target>
+	
+    <!-- Compilation target for release. -->
+    <target name="compile-release" depends="init">
+      <javac destdir="${dir.output.bin}" debug="false" >
+        <src path="${dir.src}"/>
+        <classpath refid="classpath"/>
+      </javac>
+      <copy todir="${dir.output.bin}" verbose="false">
+        <fileset dir="${dir.src}">
+        </fileset>
+      </copy>
+    </target>
+    
+    <!-- Compile the unit test classes into the build directory. -->
+    <target name="compile-test" depends="compile">
+      <javac destdir="${dir.output.bin}" debug="true" debuglevel="lines,vars,source">
+        <src path="${test.dir.src}"/>
+        <classpath refid="classpath"/>
+      </javac>
+    </target>
+
+    <!-- Create a JAR file. -->
+    <target name="jar" depends="compile-release"
+            description="Builds a distributable JAR file.">
+      <jar destfile="${dir.output.dist}/working_system.jar">
+        <manifest>
+          <!-- Who is building this jar? -->
+          <attribute name="Built-By" value="${user.name}"/>
+          <!-- Information about the program itself -->
+          <attribute name="Implementation-Vendor" value="${project.vendor}"/>
+          <attribute name="Implementation-Title" value="${project.title}"/>
+          <attribute name="Implementation-Version" value="${project.version}"/>
+		  <attribute name="Main-Class" value="com.gatech.cs6310.coursemgmt.CommandLine"/>
+        </manifest>
+        <fileset dir="${dir.output.bin}">
+          <!-- Exclude unit tests from the JAR. -->
+          <exclude name="*Test.class" />
+          <exclude name="*TestSuite.class" />
+        </fileset>
+      </jar>
+    </target>
+	
+   <!-- Create a JAR file with debug settings. -->
+    <target name="jar-dev" depends="compile" description="Builds a JAR file for development purposes">
+      <jar destfile="${dir.output.dist}/working_system.jar">
+        <manifest>
+          <!-- Who is building this jar? -->
+          <attribute name="Built-By" value="${user.name}"/>
+          <!-- Information about the program itself -->
+          <attribute name="Implementation-Vendor" value="${project.vendor}"/>
+          <attribute name="Implementation-Title" value="${project.title}"/>
+          <attribute name="Implementation-Version" value="${project.version}"/>
+        </manifest>
+        <fileset dir="${dir.output.bin}">
+          <!-- Exclude unit tests from the JAR. -->
+          <exclude name="*Test.class" />
+          <exclude name="*TestSuite.class" />
+        </fileset>
+      </jar>
+    </target>
+
+    <!-- Remove all compiled files. -->
+    <target name="clean">
+      <delete dir="${dir.output.bin}" />
+      <delete dir="${dir.output.dist}" />
+    </target>
+
+    <!-- Create directory for compiled files. -->
+    <target name="init" depends="clean">
+      <mkdir dir="${dir.output.bin}"/>
+      <mkdir dir="${dir.output.dist}"/>
+    </target>
+    
+    <!-- Defines JARs needed on the classpath for compilation. -->
+    <path id="classpath">
+	    <fileset dir="${dir.lib}">
+<!--
+    	    <include name="log4j-1.2.15.jar"/>
+-->
+        </fileset>
+	 </path>
+
+</project>
